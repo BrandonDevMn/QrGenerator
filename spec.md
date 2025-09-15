@@ -13,7 +13,7 @@ A Progressive Web App (PWA) that allows users to generate QR codes from URLs and
 
 ### Code Quality
 - Write simple, easy to read, well-commented code
-- Use only HTML, CSS, and JavaScript (no frameworks or libraries)
+- Use only HTML, CSS, and JavaScript with QRCode.js library
 - Ensure code is self-documenting with clear variable and function names
 
 ### File Structure
@@ -21,11 +21,12 @@ A Progressive Web App (PWA) that allows users to generate QR codes from URLs and
 - **App icon:** `icon.jpg` (180x180px QR code themed icon)
 - Include `manifest.json` for PWA functionality
 - Include `sw.js` (service worker) for offline support
+- `qrcode.min.js` - QRCode.js library for QR code generation
 - `qr-generator.js` - Core QR code generation logic
 - `style.css` - Main stylesheet
 
 ### QR Code Generation Requirements
-- Generate QR codes using vanilla JavaScript (no external libraries)
+- Generate QR codes using QRCode.js library
 - Support URL validation before QR generation
 - Display generated QR code in a canvas element
 - Provide download functionality for the generated image
@@ -109,7 +110,7 @@ A Progressive Web App (PWA) that allows users to generate QR codes from URLs and
 ## Technical Implementation
 
 ### QR Code Generation Algorithm
-- Implement QR code generation using vanilla JavaScript
+- Implement QR code generation using QRCode.js library
 - Support QR code error correction levels
 - Handle different QR code versions based on data length
 - Optimize for URL data type encoding
@@ -179,7 +180,7 @@ A Progressive Web App (PWA) that allows users to generate QR codes from URLs and
 
 ## Security Considerations
 - URL validation and sanitization
-- No external API dependencies for QR generation
+- QRCode.js library dependency (local file, no external CDN)
 - Local processing only (no data transmission)
 - Secure file download handling
 - Input validation against malicious URLs
