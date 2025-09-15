@@ -1,0 +1,19 @@
+{
+    "name": "QR Code Generator",
+    "short_name": "QR Gen",
+    "description": "Generate QR codes from URLs and download as images",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "theme_color": "#2563eb",
+    "background_color": "#ffffff",
+    "icons": [
+        {
+            "src": "icon.jpg",
+            "sizes": "180x180",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        }
+    ]
+}

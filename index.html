@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="QR Generator">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="apple-touch-icon" href="icon.jpg">
+    <link rel="icon" href="icon.jpg">
+    <link rel="manifest" href="manifest.json">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>QR Generator</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Generate Tab Content -->
+            <div id="generate-tab" class="tab-content active">
+                <div class="input-section">
+                    <label for="url-input">Enter URL:</label>
+                    <input
+                        type="url"
+                        id="url-input"
+                        placeholder="https://example.com"
+                        autocomplete="url"
+                        spellcheck="false"
+                    >
+                    <div id="error-message" class="error-message hidden"></div>
+                </div>
+
+                <button id="generate-btn" class="generate-btn">Generate QR Code</button>
+
+                <div class="qr-display-section">
+                    <div id="qr-container" class="qr-container hidden">
+                        <div id="qrcode"></div>
+                    </div>
+                </div>
+
+                <button id="download-btn" class="download-btn hidden">Download Image</button>
+            </div>
+
+            <!-- About Tab Content -->
+            <div id="about-tab" class="tab-content">
+                <div class="about-content">
+                    <h2>About QR Generator</h2>
+                    <p>A simple Progressive Web App for generating QR codes from URLs. Perfect for sharing links quickly and easily.</p>
+
+                    <h3>How to Use</h3>
+                    <ol>
+                        <li>Enter a valid URL in the input field</li>
+                        <li>Tap "Generate QR Code"</li>
+                        <li>Your QR code will appear below</li>
+                        <li>Tap "Download Image" to save the QR code</li>
+                    </ol>
+
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Works offline after first load</li>
+                        <li>Optimized for iOS and iPad</li>
+                        <li>High-quality QR code generation</li>
+                        <li>PNG image downloads</li>
+                    </ul>
+
+                    <h3>Privacy</h3>
+                    <p>All QR codes are generated locally on your device. No data is sent to external servers.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button id="generate-tab-btn" class="nav-btn active" data-tab="generate-tab">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-label">Generate</span>
+            </button>
+            <button id="about-tab-btn" class="nav-btn" data-tab="about-tab">
+                <span class="nav-icon">ℹ️</span>
+                <span class="nav-label">About</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script src="qrcode.min.js"></script>
+    <script src="qr-generator.js"></script>
+</body>
+</html>
